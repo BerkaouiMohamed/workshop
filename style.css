@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html{
+    font-size: 14px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(240, 240, 240);
+    width: 100vw;
+    overflow-x:hidden ;
+}
+nav{
+position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+    font-weight: 600;
+    z-index: 5;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.389);
+}
+nav div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    flex: 1;
+}
+nav div :nth-child(2)
+{
+    width: 1.5px;
+    height:50px;
+    background-color: rgb(181, 181, 181);
+}
+
+#list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    flex: 1;
+   justify-content: space-around;
+    cursor: pointer;
+
+}
+.button{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .button button{
+    margin: 0 20px 0 0 ;
+    background:linear-gradient(to bottom , rgb(255, 191, 0),rgb(255, 128, 0));
+    color: white;
+    border-radius: 50px;
+    width: 150px;
+    height: 35px;
+    font-size: 1.5rem;
+   transition-duration: 0.5s;
+   transition-property: all;
+   transition-timing-function: ease;
+   border: 0;
+   cursor: pointer;
+}
+nav .button button:hover{
+    scale: 1.1;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    margin-top: 5%;
+}
+.grid4{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column: 2/3;
+    background-color: transparent !important;
+padding: 0 !important;
+box-shadow: none !important;
+}
+.grid4 img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.griditems{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 5;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.569);
+}
+.grid1, .grid6{
+    justify-self: flex-end;
+}
+.grid3,.grid5{
+    justify-self: center;
+}
+.grid7 , .grid6{
+    align-self: center;
+}
+.griditems span{
+    font-weight: 600;
+
+}
+.grid7 span{
+    font-weight: 200;
+
+
+}
+.grid7 span p{
+    font-weight: 600;
+}
+section::before{
+    content: "";
+    width: 110vw;
+    height: 80vh;
+    background-color: rgb(53, 149, 204);
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    transform: rotate(-15deg);
+    z-index: 0;
+}
+section{
+    z-index: 5;
+}
+.disc{
+    margin-top: 3%;
+    text-align: center;
+    
+}
+.disc p{
+    font-weight: 500;
+    font-size: 1rem;
+    color: red;
+    margin-bottom: 20px;
+}
+.disc h1 span{
+    color: black;
+    font-weight: 900;
+    font-size: 1.1em;
+    
+}
+.disc h1{
+    word-spacing: 8px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.disc h3{
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.contact{
+
+    margin-top: 5%;
+}
+.contactTitle{
+    text-align: center;
+    line-height: 50px;
+}
+.contactTitle p{
+    font-weight: 300;
+}
+.contactTitle h2 {
+    font-size: 4rem;
+
+}
+.contactTitle  div{
+    height: 2px;
+    width: 200px;
+    background-color: blue;
+    margin: auto;
+    margin-top: 30px;
+}
