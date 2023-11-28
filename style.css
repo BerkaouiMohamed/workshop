@@ -24,28 +24,30 @@ position: relative;
     border-radius: 5px;
     margin: 20px;
     font-weight: 600;
-    z-index: 5;
+    z-index: 50 !important;
     box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.389);
 }
-nav div{
+nav .icon{
     display: flex;
     align-items: center;
     gap: 10px;
     padding-left: 10px;
     flex: 1;
 }
-nav div :nth-child(2)
+nav .icon :nth-child(2)
 {
     width: 1.5px;
     height:50px;
     background-color: rgb(181, 181, 181);
 }
-
-#list{
+#list{ flex: 1;
+position: relative;}
+#list .div{
     display: flex;
+    width: 100%;
     align-items: center;
     list-style-type: none;
-    flex: 1;
+   
    justify-content: space-around;
     cursor: pointer;
 
@@ -73,11 +75,15 @@ nav .button button{
 nav .button button:hover{
     scale: 1.1;
 }
+#list .p{
+    display: none;
+}
 
 section{
     display: grid;
     grid-template-columns: 1fr 400px 1fr;
     margin-top: 5%;
+    position: static;
 }
 .grid4{
     grid-row-start: 1;
@@ -91,6 +97,9 @@ box-shadow: none !important;
     width: 400px;
     height: 400px;
     border-radius: 50%;
+    z-index: 1;
+    display: block;
+    position: relative;
 }
 
 .griditems{
@@ -128,12 +137,12 @@ box-shadow: none !important;
 }
 section::before{
     content: "";
-    width: 110vw;
+    width: 150vw;
     height: 80vh;
     background-color: rgb(53, 149, 204);
     position: absolute;
     top: -30%;
-    left: -10%;
+    left: -30%;
     transform: rotate(-15deg);
     z-index: 0;
 }
@@ -187,4 +196,43 @@ section{
     background-color: blue;
     margin: auto;
     margin-top: 30px;
+}
+
+
+@media screen and (max-width:850px) {
+    nav .button{
+        display: none;
+    }
+    
+}
+@media (max-width:600px) {
+    #list .p{
+display: block;
+
+    }
+    #list .div{
+        display:none ;
+    }
+    #list{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;z-index: 2;
+    }
+    #list .p{
+        display: block;
+      width: 20px;
+      height: 20px;
+    }
+    #list .p:hover  ~ .div,#list .div:hover{
+        display: block !important;
+        position: absolute;
+        left: 0px;
+        top: 20px;
+        background-color: beige;
+        border-radius: 5px;
+        padding: 15px;
+        line-height: 50px;
+        z-index: 2000 !important;
+    }
+    #list .div:hover{}
 }
